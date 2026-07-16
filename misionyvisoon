@@ -13,8 +13,6 @@
     <a href="../index.html">Inicio</a> 
     <a href="#mision">Misión</a>
     <a href="#vision">Visión</a>
-    <!-- Cambia '../pagina.html#como' por '../index.html#como' -->
-    <a href="../index.html#como">Metodología</a> 
 </nav>
 
     </div>
