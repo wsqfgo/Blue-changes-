@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión</title>
+    <title>Blue Changes - Proyecto Social</title>
     <style>
         * {
             margin: 0;
@@ -27,6 +27,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            font-family: 'Hammersmith One', sans-serif;
         }
 
         .header-container {
@@ -34,34 +35,43 @@
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
+            flex-direction: column;        
+    align-items: center;           
+    gap: 1.5rem;  
+            }
+
+        header h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: dark blue;
         }
+
+        
 
         header h1 {
             font-size: 2.5rem;
             font-weight: 700;
         }
 
-        header nav {
+        /* NAVEGACION */
+        nav {
             display: flex;
             gap: 2rem;
         }
 
-        header nav a {
+        nav a {
             color: white;
             text-decoration: none;
-            font-size: 1rem;
-            transition: opacity 0.3s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        header nav a:hover {
+        nav a:hover {
             background-color: rgba(255, 255, 255, 0.3);
-            opacity: 1;
+            transform: translateY(-2px);
         }
 
         /* CONTENEDOR PRINCIPAL */
@@ -88,30 +98,30 @@
             padding-bottom: 1rem;
         }
 
-        /* SECCION MISION */
-        .Mision {
+        /* SECCION QUIENES SOMOS */
+        .quienes-somos {
             display: flex;
             align-items: center;
             gap: 3rem;
             flex-wrap: wrap;
         }
 
-        .Mision .texto {
+        .quienes-somos .texto {
             flex: 1 1 400px;
         }
 
-        .Mision .texto p {
+        .quienes-somos .texto p {
             font-size: 1.1rem;
             color: #555;
             line-height: 1.8;
         }
 
-        .Mision .imagen {
+        .quienes-somos .imagen {
             flex: 1 1 300px;
             text-align: center;
         }
 
-        .Mision .imagen img {
+        .quienes-somos .imagen img {
             max-width: 100%;
             height: auto;
             border-radius: 15px;
@@ -119,55 +129,33 @@
             transition: transform 0.3s ease;
         }
 
-        .Mision .imagen img:hover {
+        .quienes-somos .imagen img:hover {
             transform: scale(1.05);
         }
 
-        /* SECCION VISION */
-        #vision {
+        /* SECCION PROPOSITO */
+        #Proposito {
             background: linear-gradient(135deg, #68ade9 0%, #40a9d9 100%);
             color: white;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-            padding: 40px;
-            border-radius: 10px;
         }
 
-        #vision .texto {
-            flex: 1 1 400px;
-            order: 2;
-        }
-
-        #vision .imagen {
-            flex: 1 1 300px;
-            text-align: center;
-            order: 1;
-        }
-
-        #vision .imagen img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        #vision .imagen img:hover {
-            transform: scale(1.05);
-        }
-
-        #vision h2 {
+        #Proposito h2 {
             color: white;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-bottom-color: rgba(255, 255, 255, 0.3);
         }
 
-        #vision p {
-            font-size: 1.1rem;
+        #Proposito p {
+            font-size: 1.2rem;
             font-weight: 500;
-            line-height: 1.8;
+            line-height: 2;
             font-style: italic;
+        }
+
+        /* SECCION COMO */
+        #como p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
         }
 
         /* FOOTER */
@@ -189,30 +177,21 @@
                 font-size: 1.8rem;
             }
 
-            header nav {
+            nav {
                 gap: 1rem;
-                flex-wrap: wrap;
             }
 
-            header nav a {
+            nav a {
+                padding: 0.3rem 0.7rem;
                 font-size: 0.9rem;
             }
 
-            .Mision {
+            .quienes-somos {
                 gap: 1.5rem;
             }
 
-            .Mision .texto,
-            .Mision .imagen {
-                flex: 1 1 100%;
-            }
-
-            #vision {
-                gap: 1.5rem;
-            }
-
-            #vision .texto,
-            #vision .imagen {
+            .quienes-somos .texto,
+            .quienes-somos .imagen {
                 flex: 1 1 100%;
             }
 
@@ -226,52 +205,54 @@
         }
     </style>
 </head>
-<body id="misionyvision">
-
-    <!-- HEADER -->
+<body>
+    
     <header>
         <div class="header-container">
-            <h1>🤖 Blue Changes</h1>
+            <h1>🤖 Blue Changes </h1>
+            <h2> Dejando huella </h2>
             <nav>
-                <!-- ENLACES CORREGIDOS: El "../index.html" sale de la carpeta "misionyvisoon" hacia la raíz principal -->
-                <a href="../index.html">Inicio</a>
-                <a href="#mision">Misión</a>
-                <a href="#vision">Visión</a>
-                <a href="../index.html#como">Metodología</a>
-            </nav>
+    <!-- Busca la carpeta misionyvisoon y abre el index.html que está adentro -->
+    <a href="misionyvisoon/index.html"> Mision y vision </a>
+    <a href="#Proposito">Propósito</a>
+    <a href="#como">Metodología</a>
+</nav>
+
         </div>
     </header>
 
+    
     <div class="container">
-        <!-- SECCION MISION -->
-        <section id="mision" class="Mision">
+        
+        <section id="quienes-somos" class="quienes-somos">
             <div class="texto">
-                <h2>Misión (6 meses a 1 año)</h2>
-                <p>Impulsar a niñas y niños de comunidades rurales a descubrir su potencial en las áreas STEAM mediante actividades accesibles, creativas y con enfoque social. A través de la robótica educativa y la innovación tecnológica, buscamos inspirar en ellos la confianza para afrontar desafíos y construir soluciones para sus comunidades.</p>
+                <h2>¿Quiénes somos?</h2>
+                <p>Blue changes es un proyecto social creado para enseñar a niños y niñas de entre 8 y 14 años a crear mini robots sumo de pelea con base en materiales reciclados, fomentando su interés por la robótica y mostrándoles que la tecnología no está tan lejos de ellos como parece.</p>
+                <p style="margin-top: 1rem;">Además, buscamos sensibilizarlos sobre el cuidado del medio ambiente a través de la reutilización de materiales y destacar la importancia de la participación de las mujeres en las áreas STEAM (ciencia, tecnología, ingeniería, artes y matemáticas).</p>
             </div>
             <div class="imagen">
-                <!-- RUTA IMAGEN CORREGIDA: Agregado "../" para que busque la foto en la carpeta de afuera -->
-                <img src="../blue.png" alt="Niños con robot sumo de Blue Changes" />
+                <img src="blue.png" alt="Niños con robot sumo de Blue Changes" />
             </div>
         </section>
 
-        <!-- SECCION VISION -->
-        <section id="vision">
-            <div class="imagen">
-                <!-- RUTA IMAGEN CORREGIDA: Agregado "../" para que busque la foto en la carpeta de afuera -->
-                <img src="../blue.png" alt="Niños con robot sumo de Blue Changes" />
-            </div>
-            <div class="texto">
-                <h2>Visión (A partir de 3 años o menos)</h2>
-                <p>Formar una generación de niñas y niños que vean la tecnología como un medio para transformar su realidad, inspirándolos a estudiar carreras STEAM y a desarrollar proyectos propios que generen impacto positivo en sus comunidades y en el mundo.</p>
-            </div>
+       
+        <section id="Proposito">
+            <h2>🎯 Nuestro propósito</h2>
+            <p>"Empoderar a la juventud de comunidades vulnerables a través de la robótica de bajo costo para transformar 'desechos' en tecnología, cerrando la brecha educativa en STEAM"</p>
+        </section>
+
+       
+        <section id="como">
+            <h2>🚀 ¿Cómo lo hacemos?</h2>
+            <p>Esto lo logramos con base a diferentes actividades relacionadas a las áreas STEAM, cada una de las actividades tiene su objetivo y propósito. Blue Changes no solo realiza actividades porque sí, en cada una de estas buscamos despertar la imaginación y el pensamiento crítico de cada niño para que al final de toda la sesión logre adquirir nuevas habilidades y conocimientos acerca de las áreas STEAM para que lo puedan aplicar tanto en la escuela como en su vida diaria.</p>
         </section>
     </div>
 
-    <!-- FOOTER -->
+    
     <footer>
         <p>&copy; 2026 Blue Changes - Proyecto Social</p>
         <p>Transformando desechos en tecnología 🌍</p>
+         <p> Contacto: </p>
     </footer>
 </body>
 </html>
